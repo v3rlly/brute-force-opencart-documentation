@@ -30,7 +30,7 @@ foreach($lines as $string)
 ```
 
 
-The problem is that `$ password` is not simply a string encrypted with SHA1, or MD5, or SHA1 (MD5) ... Anyway, a usual brute-force script based on these encryption templates would hardly generate a` hash` equal to `hash` that you want to 'unmask'.
+The problem is that `$password` is not simply a string encrypted with SHA1, or MD5, or SHA1 (MD5) ... Anyway, a usual brute-force script based on these encryption templates would hardly generate a` hash` equal to `hash` that you want to 'unmask'.
 
 ## SOLUCTION:
 We need to create our own script that will search the hash string in the correct form.

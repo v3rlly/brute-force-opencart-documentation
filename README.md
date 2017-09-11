@@ -2,7 +2,7 @@
 In this little tutorial I demonstrate how to perform a brute force attack based in word lists on passwords stored in OpenCart application databases.
 
 
-## SCENERY:
+## SCENERY
 - You have access to the database of an application that uses OpenCart.
 - You query the Password Hash and Salt in the administrator table and you get the following result:
 
@@ -11,7 +11,7 @@ In this little tutorial I demonstrate how to perform a brute force attack based 
 |f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@pentest-server.com 	| 1      | Admin       | das ganbi| 127.0.0.1 | developer |
 
 
-## PROBLEM:
+## PROBLEM
 You are not familiar with the OpenCart password encryption system, so you will try to unmask this `hash` with brute force using services that are based on simple SHA1 encryption.
 
 ```php
@@ -32,7 +32,7 @@ foreach($lines as $string)
 
 The problem is that `$password` is not simply a string encrypted with SHA1, or MD5, or SHA1 (MD5) ... Anyway, a usual brute-force script based on these encryption templates would hardly generate a` hash` equal to `hash` that you want to 'unmask'.
 
-## SOLUCTION:
+## SOLUCTION
 We need to create our own script that will search the hash string in the correct form.
 And what would be the correct way?
 
@@ -87,10 +87,10 @@ PASSWORD: 12345
 - the attack I did was using word list, but you can implement for other tests. Use your imagination.
 - If any word is wrong do not blame me, Blame the translator. I am Brazilian.
 
-## Fonts:
+## Fonts
 - myself
 
-## Test my tool
+## Test my tool based on this article
 [opencript - OPENCART PASSWORD DECRYPTOR BASED ON WORD LIST](https://github.com/pabloverlly/open-cript)
 
 ###### _NEED ME? [pablov3rlly gmail com]_

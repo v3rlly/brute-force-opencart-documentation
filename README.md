@@ -57,7 +57,7 @@ $password=SHA1($salt.SHA1($salt.SHA1($password)));
 **obs**: I ignored this part `OR password = '" . $this->db->escape(md5($password)) . "')` since we tested our hash and we already know that it is SHA1, right?
 
 
-## Now we know how to encrypt the strings of our wordlist to compare with the hash found in the admin table.
+## Now we know how to encrypt the strings of our wordlist to compare with the hash found in the admin table !
 
 A simple php script to test brute force on OpenCart passwords would look like this:
 

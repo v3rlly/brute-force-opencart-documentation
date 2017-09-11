@@ -58,7 +58,7 @@ obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')
 
 ## Agora já sabemos como devemos criptografar a strings da nossa wordlist e comparar com a HASH do ADMIN
 
-###### Um script php de força bruta em senhas OpenCart Ficaria algo do tipo:
+Um script php de força bruta em senhas OpenCart Ficaria algo do tipo:
 
 
 ```php

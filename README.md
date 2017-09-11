@@ -74,7 +74,7 @@ foreach($lines as $string)
 ```
 
 ```
-C:\Users\pablo\Desktop>php ler.php
+C:\Users\demo\open-cript-master>php opencript.php
 SENHA: 12345
 ```
 

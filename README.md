@@ -6,8 +6,8 @@ Nesse documento eu explico como realizar ataques de força bruta em senhas openc
 - VOCÊ CONSEGUIU INJETAR CÓDIGO SQL NO OPENCART.
 - VOCÊ CONSULTA A SENHA E O SALT DA SENHA NA TABELA DO ADMIN.
 
-- A SENHA É: f2e9efd4a366507c5b1cba7749659d93d61ae335
-- A SALT É: oInuc412L
+- A SENHA É: **f2e9efd4a366507c5b1cba7749659d93d61ae335**
+- A SALT É: **oInuc412L**
 
 ###### Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar quebrar essa HASH com força bruta.
 

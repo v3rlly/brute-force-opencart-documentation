@@ -1,4 +1,4 @@
-# brute-force-opencart-documentation
+# brute force opencart documentation
 Nesse documento eu explico como realizar ataques de força bruta em senhas opencart
 
 

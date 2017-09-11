@@ -67,7 +67,7 @@ $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
-   `$hashed=SHA1($salt.SHA1($salt.SHA1($string)));`
+   $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
    if($hashed==$password){echo "SENHA: ".$string;}else{}
 }
 ?>

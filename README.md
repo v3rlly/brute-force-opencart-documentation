@@ -38,7 +38,7 @@ Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria g
 PORQUE?
 
 SE OLHARMOS O CÓDIGO QUE FAZ A AUTENTICAÇÃO DO USUÁRIO NO OPENCART
-\opencart\system\library\customer.php
+`\opencart\system\library\customer.php`
 
 TEMOS O SEGUINTE CÓDIGO:
 ```

@@ -1,4 +1,4 @@
-# Brute force attack in OpenCart stored passwords.
+# Brute Force Attack In OpenCart Stored Passwords.
 Nesse pequeno tutorial eu ensino como realizar um ataque de força bruta baseado em lista de palavras em senhas armazenadas em bancos de dados de aplicações OpenCart
 
 

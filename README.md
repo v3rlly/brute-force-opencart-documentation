@@ -32,14 +32,14 @@ foreach($lines as $string)
 
 
 O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH igual a HASH do admin que você quer "desvendar".
+Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH igual a senha criptografada do admin que você quer "desvendar".
 
-## PORQUE?
+## SOLUÇÃO:
 
-SE OLHARMOS O CÓDIGO QUE FAZ A AUTENTICAÇÃO DO ADMIN NO OPENCART
+SE OLHARMOS O ARQUIVO PHP QUE FAZ A AUTENTICAÇÃO DO ADMIN NO OPENCART
 `\opencart\system\library\user.php`
 
-TEMOS O SEGUINTE CÓDIGO:
+ENCONTRAMOS O SEGUINTE CÓDIGO:
 ```
 $user_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "user WHERE username = '" . $this->db->escape($username) . "' AND (password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password) . "'))))) OR password = '" . $this->db->escape(md5($password)) . "') AND status = '1'");
 ```

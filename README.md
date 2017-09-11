@@ -30,8 +30,7 @@ foreach($lines as $string)
 ```
 
 
-O problema é que `$password` (senha do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma `hash` igual a senha criptografada do admin que você quer "desvendar".
+O problema é que `$password` (senha do admin) não é simplesmente uma string criptografada com SHA1, Ou MD5, Ou SHA1(MD5).. Enfim. Um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma `hash` igual a senha criptografada do admin que você quer "desvendar". Precisamos criar nosso próprio script que vai procurar a string da `hash` da forma correta.
 
 ## SOLUÇÃO:
 

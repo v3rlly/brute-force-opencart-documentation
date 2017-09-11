@@ -11,7 +11,7 @@ Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senha
 |f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@victim.com 	| 1      | admin       | das ganbi| 127.0.0.1 | developer |
 
 
-## O PROBLEMA:
+## PROBLEMA:
 Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 
 ```

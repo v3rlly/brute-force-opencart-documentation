@@ -73,4 +73,9 @@ foreach($lines as $string)
 ?>
 ```
 
+```
+C:\Users\pablo\Desktop>php ler.php
+SENHA: 12345
+```
+
 ###### _DUVIDAS? SUGESTÕES?: [pablov3rlly gmail com]_

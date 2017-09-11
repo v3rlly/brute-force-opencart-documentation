@@ -78,4 +78,4 @@ C:\Users\demo\open-cript-master>php opencript.php
 SENHA: 12345
 ```
 
-###### _DUVIDAS? SUGESTÕES?: [pablov3rlly gmail com]_
+###### _NEED ME? [pablov3rlly gmail com]_

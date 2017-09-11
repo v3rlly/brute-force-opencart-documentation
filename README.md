@@ -1,5 +1,5 @@
 # BRUTE FORCE OPENCART PASSWORDS TUTORIAL
-Nesse documento eu explico como realizar ataques de força bruta em senhas opencart
+Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senhas opencart
 
 
 ## CENÁRIO:

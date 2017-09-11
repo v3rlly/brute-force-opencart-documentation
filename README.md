@@ -35,11 +35,11 @@ Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria g
 ## PORQUE?
 
 SE OLHARMOS O CÓDIGO QUE FAZ A AUTENTICAÇÃO DO USUÁRIO NO OPENCART
-`\opencart\system\library\customer.php`
+`\opencart\system\library\user.php`
 
 TEMOS O SEGUINTE CÓDIGO:
 ```
-$customer_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer WHERE LOWER(email) ='" . $this->db->escape(strtolower($email)) . "' AND (password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password) . "'))))) OR password = '" . $this->db->escape(md5($password)) . "') AND status = '1' AND approved = '1'");
+$user_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "user WHERE username = '" . $this->db->escape($username) . "' AND (password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password) . "'))))) OR password = '" . $this->db->escape(md5($password)) . "') AND status = '1'");
 ```
 
 A PARTE QUE NOS INTERESSA:

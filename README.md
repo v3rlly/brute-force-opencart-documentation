@@ -14,23 +14,18 @@ Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senha
 ## PROBLEMA:
 Você não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 
-```
-INICIO:
+```php
+<?php
+$salt = "oInuc412L";
+$password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 
-$wordlist_string[] = WORDLIST.TXT
-
-$HASH = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
-$comparative = SHA1($wordlist_string[0]);
-
-SE $comparative IGUAL A $HASH
-	ENTÃO: A SENHA É : $comparative
-
-SE NÃO
-	$comparative = SHA1($wordlist_string[++]);
-	COMPARA A $comparative COM A $HASH
-FIM.
-
-ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $HASH
+$lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
+foreach($lines as $string)
+{
+   $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
+   if($hashed==$password){echo "SENHA: ".$string;}else{}
+}
+?>
 ```
 
 

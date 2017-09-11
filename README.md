@@ -6,8 +6,8 @@ Nesse documento eu explico como realizar ataques de força bruta em senhas openc
 - VOCÊ CONSEGUIU INJETAR CÓDIGO SQL NO OPENCART.
 - VOCÊ CONSULTA A SENHA E O SALT DA SENHA NA TABELA DO ADMIN.
 
-- A SENHA É: **f2e9efd4a366507c5b1cba7749659d93d61ae335** (SHA1)
-- A SALT É: **oInuc412L**
+- HASH **f2e9efd4a366507c5b1cba7749659d93d61ae335** (SHA1)
+- SALT **oInuc412L**
 
 Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 
@@ -16,23 +16,23 @@ INICIO:
 
 $wordlist_string[] = WORDLIST.TXT
 
-$password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
+$HASH = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 $comparative = SHA1($wordlist_string[0]);
 
-SE $comparative IGUAL A $password
+SE $comparative IGUAL A $HASH
 	ENTÃO: A SENHA É : $comparative
 
 SE NÃO
 	$comparative = SHA1($wordlist_string[++]);
-	COMPARA A $comparative COM A $password
+	COMPARA A $comparative COM A $HASH
 FIM.
 
-ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $password
+ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $HASH
 ```
 
 
-O problema é que `$password`, (A senha do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma hash equivalente a que você quer possui.
+O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
+Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH equivalente a HASH que você quer possui.
 
 PORQUE?
 
@@ -56,7 +56,7 @@ $password=SHA1($salt.SHA1($salt.SHA1($password)));
 
 obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
 
-Agora já sabemos como devemos criptografar nossas strings da nossa wordlist e comparar com a HASH do ADMIN
+Agora já sabemos como devemos criptografar a strings da nossa wordlist e comparar com a HASH do ADMIN
 
 FICARIA ALGO DO TIPO:
 

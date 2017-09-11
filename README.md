@@ -20,7 +20,7 @@ You are not familiar with the OpenCart password encryption system, so you will t
 <?php
 $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 
-$lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
+$lines = file('wordlist_demo.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($string);
@@ -69,7 +69,7 @@ A simple php script to test brute force on OpenCart passwords would look like th
 $salt = "oInuc412L";
 $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 
-$lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
+$lines = file('wordlist_demo.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($salt.SHA1($salt.SHA1($string)));

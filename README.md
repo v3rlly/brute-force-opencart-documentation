@@ -12,7 +12,7 @@ Nesse pequeno tutorial eu ensino como realizar um ataque de força bruta baseado
 
 
 ## PROBLEMA:
-Você não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa Hash com força bruta comum usando criptografia SHA1.
+Você não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa `hash` com força bruta comum usando criptografia SHA1.
 
 ```php
 #exemple:
@@ -31,7 +31,7 @@ foreach($lines as $string)
 
 
 O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma `Hash` igual a senha criptografada do admin que você quer "desvendar".
+Logo um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma `hash` igual a senha criptografada do admin que você quer "desvendar".
 
 ## SOLUÇÃO:
 

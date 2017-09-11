@@ -6,9 +6,9 @@ Nesse documento eu explico como realizar ataques de força bruta em senhas openc
 - VOCÊ CONSEGUIU ACESSO AO BANCO DE DADOS OPENCART.
 - VOCÊ CONSULTA A SENHA E O SALT DA SENHA NA TABELA DO ADMIN.
 
-| user_id | user_group_id | ip        | code    | salt      | image   | email                   | status | username    | lastname | password                                 | firstname | date_added          |
-|---------|---------------|-----------|---------|-----------|---------|-------------------------|--------|-------------|----------|------------------------------------------|-----------|---------------------|
-| 1       | 1             | 127.0.0.1 | <blank> | oInuc412L | <blank> | admin@victim.com 		| 1      | admin       | das ganbi| f2e9efd4a366507c5b1cba7749659d93d61ae335 | developer | 2017-09-11 00:47:00 |
+| password      						  | salt    | email             | status | username    | lastname | ip        | firstname |
+|-----------------------------------------|---------|-------------------|--------|-------------|----------|-----------|-----------|
+|f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@victim.com 	| 1      | admin       | das ganbi| 127.0.0.1 | developer |
 
 Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 

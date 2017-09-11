@@ -47,7 +47,7 @@ A PARTE QUE NOS INTERESSA:
 password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password) . "'))))) OR password = '" . $this->db->escape(md5($password)) . "')
 ```
 
-TRANSFORMANDO PRA NOSSA LINGUA FICA ALGO COMO:
+ADAPTANDO O CÓDIGO TEMOS:
 ```
 $password=SHA1($salt.SHA1($salt.SHA1($password)));
 ```

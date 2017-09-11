@@ -12,7 +12,7 @@ Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senha
 
 
 ## PROBLEMA:
-Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
+Você não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 
 ```
 INICIO:

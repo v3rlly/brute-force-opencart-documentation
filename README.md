@@ -32,12 +32,12 @@ ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $HASH
 
 
 O problema é que `$password` (A senha decimal do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH equivalente a HASH que você quer "desvendar".
+Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH igual a HASH do admin que você quer "desvendar".
 
 PORQUE?
 
-OLHANDO NO CÓDIGO QUE FAZ A AUTENTICAÇÃO DO USUÁRIO NO OPENCART
-\system\library\customer.php
+SE OLHARMOS O CÓDIGO QUE FAZ A AUTENTICAÇÃO DO USUÁRIO NO OPENCART
+\opencart\system\library\customer.php
 
 TEMOS O SEGUINTE CÓDIGO:
 ```

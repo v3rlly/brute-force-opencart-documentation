@@ -83,4 +83,8 @@ C:\Users\demo\open-cript-master>php opencript.php
 PASSWORD: 12345
 ```
 
+## Final considerations
+- the attack I did was using word list, but you can implement for other tests. Use your imagination.
+- If any word is wrong do not blame me, Blame the translator.
+
 ###### _NEED ME? [pablov3rlly gmail com]_

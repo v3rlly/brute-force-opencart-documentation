@@ -36,7 +36,7 @@ The problem is that `$password` is not simply a string encrypted with SHA1, or M
 We need to create our own script that will search the hash string in the correct form.
 And what would be the correct way?
 
-SE CHECARMOS O ARQUIVO PHP QUE FAZ A AUTENTICAÇÃO DO ADMIN NO OPENCART
+IF WE CHECK THE PHP FILE THAT MAKES ADMIN AUTHENTICATION ON THE OPENCART
 `\opencart\system\library\user.php`
 
 WE FIND THE FOLLOWING CODE:

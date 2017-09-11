@@ -85,6 +85,9 @@ PASSWORD: 12345
 
 ## Final considerations
 - the attack I did was using word list, but you can implement for other tests. Use your imagination.
-- If any word is wrong do not blame me, Blame the translator.
+- If any word is wrong do not blame me, Blame the translator. I am Brazilian.
+
+## Fonts:
+- myself
 
 ###### _NEED ME? [pablov3rlly gmail com]_

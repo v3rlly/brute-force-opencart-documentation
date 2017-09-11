@@ -15,6 +15,8 @@ Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senha
 Você não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 
 ```php
+#exemple:
+
 <?php
 $salt = "oInuc412L";
 $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
@@ -60,6 +62,8 @@ obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')
 
 
 ```php
+#exemple:
+
 <?php
 $salt = "oInuc412L";
 $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";

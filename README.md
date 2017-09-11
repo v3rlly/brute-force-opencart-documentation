@@ -3,7 +3,7 @@ Nesse documento eu explico como realizar ataques de força bruta em senhas openc
 
 
 ## CENÁRIO:
-- VOCÊ CONSEGUIU INJETAR CÓDIGO SQL NO OPENCART.
+- VOCÊ CONSEGUIU ACESSO AO BANCO DE DADOS OPENCART.
 - VOCÊ CONSULTA A SENHA E O SALT DA SENHA NA TABELA DO ADMIN.
 
 - HASH **f2e9efd4a366507c5b1cba7749659d93d61ae335** (SHA1)
@@ -31,7 +31,7 @@ ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $HASH
 ```
 
 
-O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
+O problema é que `$password` (A senha decimal do admin) não é simplesmente uma string criptografada com SHA1.
 Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH equivalente a HASH que você quer possui.
 
 PORQUE?

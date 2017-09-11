@@ -9,7 +9,7 @@ Nesse documento eu explico como realizar ataques de força bruta em senhas openc
 - A SENHA É: **f2e9efd4a366507c5b1cba7749659d93d61ae335** (SHA1)
 - A SALT É: **oInuc412L**
 
-Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar quebrar essa HASH com força bruta comum usando criptografia SHA1.
+Se vc não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa HASH com força bruta comum usando criptografia SHA1.
 
 ```
 INICIO:
@@ -31,7 +31,7 @@ ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $password
 ```
 
 
-O problema é que $password, A senha do admin não é simplesmente uma string criptografada com SHA1.
+O problema é que `$password`, (A senha do admin) não é simplesmente uma string criptografada com SHA1.
 Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma hash equivalente a que você quer possui.
 
 PORQUE?
@@ -79,3 +79,4 @@ FIM.
 ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $password
 ```
 
+#DUVIDAS? SUGESTÕES: [pablov3rlly gmail com]

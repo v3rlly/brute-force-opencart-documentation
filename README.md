@@ -1,5 +1,5 @@
 # Brute force attack in OpenCart stored passwords.
-Nesse pequeno tutorial eu explico como realizar ataques de força bruta baseadas em wordlists em senhas armazenadas no OpenCart
+Nesse pequeno tutorial eu explico como realizar um ataque de força bruta baseada em lista de palavras em senhas armazenadas no banco de dados do OpenCart
 
 
 ## CENÁRIO:
@@ -32,7 +32,7 @@ foreach($lines as $string)
 
 
 O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH igual a senha criptografada do admin que você quer "desvendar".
+Logo um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma HASH igual a senha criptografada do admin que você quer "desvendar".
 
 ## SOLUÇÃO:
 

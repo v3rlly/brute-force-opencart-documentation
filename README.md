@@ -1,4 +1,4 @@
-# BRUTE FORCE OPENCART PASSWORDS
+# BRUTE FORCE ATTACK IN OpenCart PASSWORDS.
 Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senhas OpenCart
 
 

@@ -50,7 +50,7 @@ password = SHA1(CONCAT(salt, SHA1(CONCAT(salt, SHA1('" . $this->db->escape($pass
 ```
 
 TRANSFORMANDO PRA NOSSA LINGUA FICA ALGO COMO:
-$password=SHA1($salt.SHA1($salt.SHA1($password)));
+`$password=SHA1($salt.SHA1($salt.SHA1($password)));`
 
 obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
 

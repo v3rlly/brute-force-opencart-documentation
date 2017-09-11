@@ -8,7 +8,7 @@ Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senha
 
 | password      						  | salt    | email             | status | username    | lastname | ip        | firstname |
 |-----------------------------------------|---------|-------------------|--------|-------------|----------|-----------|-----------|
-|f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@victim.com 	| 1      | admin       | das ganbi| 127.0.0.1 | developer |
+|f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@victim.com 	| 1      | Admin       | das ganbi| 127.0.0.1 | developer |
 
 
 ## PROBLEMA:
@@ -56,7 +56,7 @@ $password=SHA1($salt.SHA1($salt.SHA1($password)));
 
 obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
 
-## Agora já sabemos como devemos criptografar a strings da nossa wordlist e comparar com a HASH do ADMIN
+## Agora já sabemos como devemos criptografar a strings da nossa wordlist para comparar com a Hash do Admin
 
 Um script php de força bruta em senhas OpenCart ficaria assim:
 

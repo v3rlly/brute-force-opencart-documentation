@@ -31,7 +31,7 @@ foreach($lines as $string)
 
 
 O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
-Logo um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma HASH igual a senha criptografada do admin que você quer "desvendar".
+Logo um script de força bruta baseada nesse tipo de criptografia dificilmente geraria uma `Hash` igual a senha criptografada do admin que você quer "desvendar".
 
 ## SOLUÇÃO:
 
@@ -55,7 +55,7 @@ $password=SHA1($salt.SHA1($salt.SHA1($password)));
 
 **obs**: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
 
-## Agora já sabemos como devemos criptografar a strings da nossa wordlist para comparar com a Hash do Admin
+## Agora já sabemos como devemos criptografar as strings da nossa wordlist para comparar com a `hash` encontrada na tabela do administrador.
 
 Um script simples em php para testar força bruta em senhas OpenCart ficaria assim:
 

@@ -34,7 +34,7 @@ ASSIM SUCESSIVAMENTE ATÉ TERMOS $comparative == $HASH
 ```
 
 
-O problema é que `$password` (A senha decimal do admin) não é simplesmente uma string criptografada com SHA1.
+O problema é que `$password` (A senha do admin) não é simplesmente uma string criptografada com SHA1.
 Logo um programa de força bruta baseada nesse tipo de criptografia nunca iria gerar uma HASH igual a HASH do admin que você quer "desvendar".
 
 PORQUE?

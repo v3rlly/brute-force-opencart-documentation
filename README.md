@@ -25,7 +25,7 @@ $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($string);
-   if($hashed==$password){echo "SENHA: ".$string;}else{}
+   if($hashed==$password){echo "SENHA: ".$string;} else{}
 }
 ?>
 ```
@@ -72,7 +72,7 @@ $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($salt.SHA1($salt.SHA1($string)));
-   if($hashed==$password){echo "SENHA: ".$string;}else{}
+   if($hashed==$password){echo "SENHA: ".$string;} else{}
 }
 ?>
 ```

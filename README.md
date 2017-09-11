@@ -3,7 +3,7 @@ Nesse pequeno tutorial eu ensino como realizar um ataque de força bruta baseado
 
 
 ## CENÁRIO:
-- Você conseguiu acesso ao banco de dados OpenCart.
+- Você conseguiu acesso ao banco de dados de uma determinada aplicação que usa OpenCart.
 - Você consulta a Hash e o Salt da senha na tabela do administrator.
 
 | password      						  | salt    | email             | status | username    | lastname | ip        | firstname |

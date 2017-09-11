@@ -18,7 +18,6 @@ Você não conhece o sistema de criptografia de senhas do OpenCart, Então você
 #exemple:
 
 <?php
-$salt = "oInuc412L";
 $password = "f2e9efd4a366507c5b1cba7749659d93d61ae335";
 
 $lines = file('wordlis.txt', FILE_IGNORE_NEW_LINES);

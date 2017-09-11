@@ -8,7 +8,7 @@ Nesse pequeno tutorial eu explico como realizar ataques de força bruta em senha
 
 | password      						  | salt    | email             | status | username    | lastname | ip        | firstname |
 |-----------------------------------------|---------|-------------------|--------|-------------|----------|-----------|-----------|
-|f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@victim.com 	| 1      | Admin       | das ganbi| 127.0.0.1 | developer |
+|f2e9efd4a366507c5b1cba7749659d93d61ae335 |oInuc412L| admin@pentest-server.com 	| 1      | Admin       | das ganbi| 127.0.0.1 | developer |
 
 
 ## PROBLEMA:

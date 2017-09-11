@@ -25,7 +25,7 @@ $lines = file('wordlist_demo.txt', FILE_IGNORE_NEW_LINES);
 foreach($lines as $string)
 {
    $hashed=SHA1($string);
-   if($hashed==$password){echo "PASSWORD: ".$string;} else{}
+   if($hashed==$password) { echo "PASSWORD: ".$string; } else{}
 } ?>
 ```
 

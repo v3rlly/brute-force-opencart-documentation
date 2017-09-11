@@ -3,8 +3,8 @@ Nesse pequeno tutorial eu explico como realizar um ataque de força bruta basead
 
 
 ## CENÁRIO:
-- VOCÊ CONSEGUIU ACESSO AO BANCO DE DADOS OPENCART.
-- VOCÊ CONSULTA A SENHA E O SALT DA SENHA NA TABELA DO ADMIN.
+- Você conseguiu acesso ao banco de dados OpenCart.
+- Você consulta a Hash e o Salt da senha na tabela do administrator.
 
 | password      						  | salt    | email             | status | username    | lastname | ip        | firstname |
 |-----------------------------------------|---------|-------------------|--------|-------------|----------|-----------|-----------|

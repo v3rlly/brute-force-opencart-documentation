@@ -53,7 +53,7 @@ ADAPTANDO O CÓDIGO TEMOS:
 $password=SHA1($salt.SHA1($salt.SHA1($password)));
 ```
 
-obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
+**obs**: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
 
 ## Agora já sabemos como devemos criptografar a strings da nossa wordlist para comparar com a Hash do Admin
 

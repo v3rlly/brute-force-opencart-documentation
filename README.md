@@ -57,9 +57,9 @@ $password=SHA1($salt.SHA1($salt.SHA1($password)));
 
 obs: ignorei a parte `OR password = '" . $this->db->escape(md5($password)) . "')` já que testamos nossa hash e já sabemos que é SHA1, certo?
 
-Agora já sabemos como devemos criptografar a strings da nossa wordlist e comparar com a HASH do ADMIN
+## Agora já sabemos como devemos criptografar a strings da nossa wordlist e comparar com a HASH do ADMIN
 
-Então, Um programa para força bruta em senhas OpenCart Ficaria algo do tipo:
+###### Um programa para força bruta em senhas OpenCart Ficaria algo do tipo:
 
 
 ```
